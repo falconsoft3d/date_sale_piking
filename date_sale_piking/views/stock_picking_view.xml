@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="stock_picking_waiting_form_view" model="ir.ui.view">
+        <field name="name">stock.picking.waiting.form.view</field>
+        <field name="model">stock.picking</field>
+        <field name="inherit_id" ref="stock.view_picking_form" />
+        <field name="arch" type="xml">
+            <xpath expr="//field[@name='min_date']" position="after">
+                    <field name="customer_waiting_delivery" attrs="{'invisible': [('waiting_delivery','=', False)]}" />
+                    <field name="waiting_delivery" invisible="1"/>
+            </xpath>
+        </field>
+    </record>
+</odoo>

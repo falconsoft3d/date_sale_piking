@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="sale_order_date_picking_form_view" model="ir.ui.view">
+        <field name="name">sale.order.date.picking.form.view</field>
+        <field name="model">sale.order</field>
+        <field name="inherit_id" ref="sale.view_order_form" />
+        <field name="arch" type="xml">
+            <xpath expr="//field[@name='payment_term_id']" position="after">
+                    
+                    <field name="delivery_form"/>
+                    <field name="immediate_delivery" attrs="{'invisible': [('delivery_form','in',['2','3','False'])],'required':[('delivery_form','=','1')]}" />
+                    <field name="exact_delivery_date" attrs="{'invisible': [('delivery_form','in',['1','3','False'])],'required':[('delivery_form','=','2')]}" />
+                    <field name="date_ref" invisible='1' />
+                    <!--<field name="customer_waiting_delivery" attrs="{'invisible': [('delivery_form','in',['1','2','False'])]}"/>-->
+            </xpath>
+        </field>
+    </record>
+</odoo>
