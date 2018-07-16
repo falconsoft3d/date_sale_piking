@@ -23,8 +23,8 @@
 {
     'name': "Date Sale Piking",
     'version': '10.0.0.1.0',
-    'author': "Falcón Solutions",
-    'maintainer': 'Falcon Solutions',
+    'author': "Falcon Solutions SpA",
+    'maintainer': 'Falcon Solutions SpA',
     'website': 'http://www.falconsolutions.cl',
     'license': 'AGPL-3',
     'category': 'Sales',
